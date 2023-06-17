@@ -1,0 +1,695 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Comfortaa:wght@300;400;500;600;700&family=Pangolin&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tsukimi+Rounded:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.5s ease;
+}
+body {
+  height: 100vh;
+}
+section {
+  padding: 100px;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  background: #fff;
+  transition: 0.5s ease;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+header .logo img {
+  width: 110px;
+  position: relative;
+}
+header ul {
+  position: relative;
+  display: flex;
+}
+header ul li {
+  list-style: none;
+}
+header ul li a {
+  display: inline-block;
+  color: black;
+  margin-left: 80px;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+header ul li a:hover {
+  color: #cd201e;
+}
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+.content .textbox {
+  width: 44%;
+  position: relative;
+  justify-content: center;
+  /* text-align: center; */
+}
+.content .textbox h2 {
+  font-size: 50px;
+  font-family: "Comfortaa", cursive;
+  line-height: 1.9em;
+}
+.content .textbox p {
+  font-size: 20px;
+  font-family: cairo, sans-serif;
+  margin-right: 50px; /* increase the distance between h2 and p */
+  margin-bottom: 40px;
+  margin-top: 20px;
+  font-weight: 700;
+  color: black;
+}
+.content .textbox h2 span {
+  font-size: 70px; /* make the word in the span bigger */
+  color: #cd201e;
+}
+.nesacafe-cup {
+  width: 40em; /* decrease the size of the mug */
+  z-index: 77;
+  position: absolute;
+}
+.btn {
+  text-decoration: none;
+  background-color: #cd201e;
+  font-size: 30px;
+  padding: 10px;
+  color: white;
+  border-radius: 15px;
+  text-transform: capitalize;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 5px;
+  transition: 0.5s ease;
+  margin-left: 4em;
+}
+.btn:hover {
+  background-color: #622120;
+  transform: scale(1.3);
+}
+#theme {
+  position: absolute;
+  font-size: 40px;
+  left: 93%;
+  bottom: 8%;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+#theme:hover {
+  /* color: #622120; */
+  transform: scale(1.3);
+}
+section {
+  width: 100%;
+  height: 100%;
+}
+/* body::after{
+  width:100%; 
+  height: 100vh;
+  content: '';
+  position: absolute;
+  background: #cd201e;
+  clip-path: circle(40% at right 70%);
+  z-index: 5;
+} */
+
+.content .imagebox {
+  width: 50%;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #cd201e;
+  clip-path: circle(565px at right 87%);
+  transition: background-color 0.5s ease;
+}
+
+/* @media (max-width: 1920px) {
+  .circle {
+    clip-path: circle(720px at right 87%);
+  }
+}
+@media (max-width: 1800px) {
+  .circle {
+    clip-path: circle(650px at right 87%);
+  }
+  .nesacafe-cup {
+    right: 60px;
+    bottom: -100px;
+    position: absolute;
+  }
+}
+
+@media (max-width: 1600px) {
+  .circle {
+    clip-path: circle(600px at right 87%);
+  }
+  .nesacafe-cup {
+    right: 20px;
+    bottom: -100px;
+    position: absolute;
+  }
+}
+@media (max-width: 1570px) {
+  .circle {
+    clip-path: circle(550px at right 87%);
+  }
+  .nesacafe-cup {
+    right: 60px;
+    bottom: -100px;
+    position: absolute;
+    max-width: 35em;
+  }
+}
+@media (max-width: 1500px) {
+  .circle {
+    clip-path: circle(550px at right 87%);
+  }
+  .nesacafe-cup {
+    right: 10px;
+    bottom: -100px;
+    position: absolute;
+    max-width: 35em;
+  }
+}
+@media (max-width: 1450px) {
+  .circle {
+    clip-path: circle(500px at right 87%);
+  }
+  .nesacafe-cup {
+    right: -20px;
+    bottom: -100px;
+    position: absolute;
+    max-width: 35em;
+  }
+}
+@media (max-width: 1400px) {
+  .circle {
+    clip-path: circle(500px at right 87%);
+  }
+}
+@media (max-width: 1275px) {
+  .circle {
+    clip-path: circle(450px at right 87%);
+  }
+  .content .textbox .h2 {
+    font-size: 45px;
+  }
+  .content .textbox h2 span {
+    font-size: 64px;
+  }
+  .content .textbox p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1210px) {
+  .circle {
+    clip-path: circle(400px at right 87%);
+  }
+  .content .textbox .h2 {
+    font-size: 40px;
+  }
+  .content .textbox h2 span {
+    font-size: 60px;
+  }
+  .content .textbox p {
+    font-size: 17px;
+  }
+  .btn {
+    margin-left: 3em;
+  }
+}
+@media (max-width: 1170px) {
+  .circle {
+    clip-path: circle(400px at right 87%);
+  }
+  .content .textbox .h2 {
+    font-size: 37px;
+  }
+  .content .textbox h2 span {
+    font-size: 56px;
+  }
+  .content .textbox p {
+    font-size: 17px;
+  }
+  .btn {
+    margin-left: 2em;
+  }
+  .nesacafe-cup {
+    max-width: 34em;
+    right: -70px;
+    bottom: -100px;
+    position: absolute;
+  }
+  .circle {
+    clip-path: circle(410px at right 87%);
+  }
+}
+@media (max-width: 1130px) {
+  .content .textbox .h2 {
+    font-size: 33px;
+  }
+  .content .textbox h2 span {
+    font-size: 52px;
+  }
+  .content .textbox p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1090px) {
+  .content .textbox .h2 {
+    font-size: 24px;
+  }
+  .content .textbox h2 span {
+    font-size: 44px;
+  }
+  .content .textbox p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1030px) {
+  .nesacafe-cup {
+    right: -90px;
+  }
+  .content .textbox .h2 {
+    font-size: 21px;
+  }
+  .content .textbox h2 span {
+    font-size: 41px;
+  }
+  .content .textbox p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1000px) {
+  .btn {
+    margin-left: 1.2em;
+  }
+  .nesacafe-cup {
+    max-width: 34em;
+    right: -115px;
+    bottom: -40px;
+    position: absolute;
+  }
+} */
+
+/* 320 480 768 1024 1280 1440 1920 2560 */
+/* @media (max-width: 320px) {
+  .nesacafe-cup {
+    right: 80px;
+    bottom: -80px;
+    max-width: 11em;
+  }
+  section {
+    padding: 20px;
+  }
+  .textbox {
+    top: -90px;
+    position: absolute;
+    left: 30px;
+  }
+  .circle {
+    clip-path: circle(300px at right 115%);
+  }
+  .content {
+    display: flex;
+    position: absolute;
+  }
+  .content .textbox h2 {
+    font-size: 10px;
+  }
+  .content .textbox h2 span {
+    font-size: 16px;
+  }
+  .content .textbox p {
+    font-size: 6px;
+    margin-top: 10px;
+  }
+  .btn {
+    font-size: 8px;
+    padding: 6px;
+    left: -30px;
+    position: absolute;
+    margin-top: -3em;
+    position: absolute;
+  }
+  header {
+    padding: 20px 60px;
+  }
+  header {
+    padding: 20px 10px;
+  }
+  header .logo img {
+    width: 50px;
+  }
+  #theme {
+    font-size: 3px;
+    left: 77%;
+  }
+  header ul li a {
+    font-size: 7px;
+    margin-left: 10px;
+  }
+} */
+@media (min-width: 320px) and (max-width: 480px) {
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .nesacafe-cup {
+    right: 80px;
+    bottom: -80px;
+    max-width: 11em;
+  }
+  section {
+    padding: 20px;
+  }
+  .textbox {
+    top: -90px;
+    position: absolute;
+    left: 30px;
+  }
+  .circle {
+    clip-path: circle(300px at right 115%);
+  }
+  .content {
+    display: flex;
+    position: absolute;
+  }
+  .content .textbox h2 {
+    font-size: 10px;
+  }
+  .content .textbox h2 span {
+    font-size: 16px;
+  }
+  .content .textbox p {
+    font-size: 6px;
+    margin-top: 10px;
+  }
+  .btn {
+    font-size: 8px;
+    padding: 6px;
+    left: -30px;
+    position: absolute;
+    margin-top: -3em;
+    position: absolute;
+  }
+  header {
+    padding: 20px 60px;
+  }
+  header {
+    padding: 20px 10px;
+  }
+  header .logo img {
+    width: 20px;
+  }
+  #theme {
+    font-size: 3px;
+    left: 77%;
+  }
+  header ul li a {
+    font-size: 7px;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nesacafe-cup {
+    right: -50px;
+    bottom: -150px;
+    max-width: 25em;
+  }
+  section {
+    padding: 70px;
+  }
+  .textbox {
+    top: -100px;
+    position: absolute;
+  }
+  .circle {
+    clip-path: circle(500px at right 115%);
+  }
+  .content .textbox h2 {
+    font-size: 24px;
+  }
+  .content .textbox h2 span {
+    font-size: 38px;
+  }
+  .content .textbox p {
+    font-size: 12px;
+  }
+  .btn {
+    font-size: 17px;
+    margin-left: 2.1em;
+    margin-top: 0.4em;
+    position: absolute;
+  }
+  header {
+    padding: 20px 60px;
+  }
+  header .logo img {
+    width: 90px;
+  }
+  #theme {
+    font-size: 42px;
+    left: 91%;
+  }
+  header ul li a {
+    font-size: 12px;
+    margin-left: 40px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .nesacafe-cup {
+    right: -30px;
+    bottom: -50px;
+    max-width: 17em;
+  }
+  .circle {
+    clip-path: circle(400px at right 115%);
+  }
+  .content .textbox h2 {
+    font-size: 27px;
+  }
+  .content .textbox h2 span {
+    font-size: 44px;
+  }
+  .content .textbox p {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 20px;
+    margin-left: 3.6em;
+    margin-top: 0.4em;
+    position: absolute;
+  }
+  header .logo img {
+    width: 97px;
+  }
+  #theme {
+    font-size: 42px;
+    left: 91%;
+  }
+  header ul li a {
+    font-size: 12px;
+    margin-left: 60px;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .nesacafe-cup {
+    right: -30px;
+    bottom: -150px;
+    max-width: 25em;
+  }
+  .circle {
+    clip-path: circle(500px at right 115%);
+  }
+  .content .textbox h2 {
+    font-size: 32px;
+  }
+  .content .textbox h2 span {
+    font-size: 52px;
+  }
+  .content .textbox p {
+    font-size: 17px;
+  }
+  .btn {
+    font-size: 29px;
+    margin-left: 3.6em;
+    margin-top: 0.6em;
+    position: absolute;
+  }
+  header .logo img {
+    width: 120px;
+  }
+  #theme {
+    font-size: 54px;
+    left: 91%;
+  }
+  header ul li a {
+    font-size: 18px;
+    margin-left: 70px;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1600px) {
+  .nesacafe-cup {
+    right: -30px;
+    bottom: -180px;
+    max-width: 30em;
+  }
+  .circle {
+    clip-path: circle(550px at right 115%);
+  }
+  .content .textbox h2 {
+    font-size: 35px;
+  }
+  .content .textbox h2 span {
+    font-size: 58px;
+  }
+  .content .textbox p {
+    font-size: 18px;
+  }
+  .btn {
+    font-size: 35px;
+    margin-left: 3.6em;
+    margin-top: 0.6em;
+    position: absolute;
+  }
+  header .logo img {
+    width: 140px;
+  }
+  #theme {
+    font-size: 65px;
+    left: 91%;
+  }
+  header ul li a {
+    font-size: 21px;
+  }
+}
+@media (min-width: 1600px) and (max-width: 1920px) {
+  .nesacafe-cup {
+    right: 0px;
+    bottom: -150px;
+    max-width: 35em;
+  }
+  .circle {
+    clip-path: circle(600px at right 115%);
+  }
+  .content .textbox h2 {
+    font-size: 40px;
+  }
+  .content .textbox h2 span {
+    font-size: 65px;
+  }
+  .content .textbox p {
+    font-size: 20px;
+  }
+  .btn {
+    font-size: 40px;
+    margin-left: 3.6em;
+    margin-top: 0.6em;
+    position: absolute;
+  }
+  header .logo img {
+    width: 160px;
+  }
+  #theme {
+    font-size: 65px;
+    left: 91%;
+  }
+  header ul li a {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1920px) and (max-width: 2560px) {
+  .nesacafe-cup {
+    right: 50px;
+    bottom: -90px;
+    max-width: 45em;
+  }
+  .circle {
+    clip-path: circle(800px at right 115%);
+  }
+  .content .textbox h2 {
+    font-size: 60px;
+  }
+  .content .textbox h2 span {
+    font-size: 95px;
+  }
+  .content .textbox p {
+    font-size: 25px;
+  }
+  .btn {
+    font-size: 50px;
+    margin-left: 3.6em;
+    margin-top: 0.6em;
+    position: absolute;
+  }
+  header .logo img {
+    width: 190px;
+  }
+  #theme {
+    font-size: 65px;
+    left: 91%;
+  }
+  header ul li a {
+    font-size: 27px;
+  }
+}
+@media (min-width: 2560px) {
+  .nesacafe-cup {
+    right: 100px;
+    bottom: -100px;
+    width: 40em;
+  }
+  .circle {
+    clip-path: circle(925px at right 115%);
+  }
+  .content .textbox h2 {
+    font-size: 80px;
+  }
+  .content .textbox h2 span {
+    font-size: 110px;
+  }
+  .content .textbox p {
+    font-size: 30px;
+  }
+  .btn {
+    font-size: 50px;
+    margin-left: 6.3em;
+    margin-top: 0.6em;
+    position: absolute;
+  }
+  header .logo img {
+    width: 200px;
+  }
+  header ul li a {
+    font-size: 30px;
+  }
+  #theme {
+    font-size: 65px;
+    left: 91%;
+  }
+}
